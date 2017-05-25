@@ -6,7 +6,7 @@ The Wine container is based on [this work](https://singularity-hub.org/container
 
 Essentially in the %post section install the necessary Ubuntu dependencies and Wine.
 
-Then in the %runscript section at the first run, install the needed programs (in this case DirectX and IDL - though DirectX is not needed in this case), and then package the whole Wine environment into a directory, in this case, in my home, `$HOME/WINE/IDL` for future use.
+Then in the %runscript section at the first run, install the needed programs (IDL in this case), and then package the whole Wine environment into a directory, in this case, in my home, `$HOME/WINE/IDL` for future use.
 
 On a subsequent execution of the container, the Wine environment gets restored, so, one can run the program (in this case PeakSelector via IDL runtime), which was installed in the first run.
 
@@ -19,4 +19,5 @@ In this particular container, only the IDL runtime is available (no license is s
 wine $WINEPREFIX/drive_c/Program\ Files/ITT/IDL64/bin/bin.x86/idlrt.exe /uufs/chpc.utah.edu/common/home/u0101881/physics/saveez/PeakSelector_V9.6/Peakselector.sav
 ```
 
-It appears that once the 
+TODO: Add license to IDL
+
